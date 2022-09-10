@@ -1,0 +1,61 @@
+.hero {
+  max-width: 1600px;
+  height: 600px;
+  margin: 0 auto;
+  background-color: #C4C4C4;
+  background-image: var(--bg-gradient), url(../images/hero-mobile.jpg);  
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  padding: 200px 0;
+  text-align: center;
+
+  @include retina-bg-img {
+    background-image: var(--bg-gradient), url(../images/hero-mobile-2x.jpg);
+  }
+ 
+  @media screen and (max-width: 1199px) {
+    padding: 118px 0;
+    height: 400px;
+  }
+
+  @include tablet {
+    background-image: var(--bg-gradient), url(../images/hero-tablet.jpg);  
+
+    @include retina-bg-img {
+      background-image: var(--bg-gradient), url(../images/hero-tablet-2x.jpg);
+    }
+  }
+
+  @include desktop {
+    background-image: var(--bg-gradient), url(../images/hero-desktop.jpg);  
+
+    @include retina-bg-img {
+      background-image: var(--bg-gradient), url(../images/hero-desktop-2x.jpg);
+    }
+  }
+}
+  
+.hero__title {
+  color: var(--background-color);
+
+  @include font(900, 44px, 1.4, 0.06);
+  
+  width: 696px;
+  text-align: center;
+  
+  text-transform: uppercase;
+  margin-right: auto;
+  margin-left: auto;
+
+  @media screen and (max-width: 1199px) {
+    max-width: 360px;
+    font-size: 26px;
+    line-height: 1.6;
+  }
+
+  @media screen and (max-width: 350px) {
+    max-width: 300px;
+  }
+}
+
